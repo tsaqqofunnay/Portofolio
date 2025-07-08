@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsaqqof Unnay | Creative Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for crisp icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A; /* Sedikit lebih gelap dari hitam murni */
+            color: #E5E5E5;
+        }
+
+        /* Warna aksen hijau terang, mirip contoh */
+        .accent-green {
+            color: #34D399; /* Tailwind's green-400 */
+        }
+        .bg-accent-green {
+            background-color: #34D399;
+        }
+        .border-accent-green {
+            border-color: #34D399;
+        }
+
+        /* Styling untuk tombol utama */
+        .btn-primary {
+            background-color: #34D399;
+            color: #111827; /* Dark text on light button */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px -5px rgba(52, 211, 153, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px -5px rgba(52, 211, 153, 0.6);
+        }
+
+        /* Styling untuk tombol sekunder (outline) */
+        .btn-secondary {
+            border: 1px solid #4B5563; /* Gray-600 */
+            color: #E5E5E5;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #1F2937; /* Gray-800 */
+            border-color: #6B7280; /* Gray-500 */
+        }
+        
+        /* Glassmorphism effect untuk beberapa elemen */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Styling untuk accordion di bagian Services */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== Header / Navbar ===== -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="glass-card rounded-xl px-6 py-3 flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-white">Tsaqqof U.</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">Tentang Saya</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors">Layanan</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portofolio</a>
+                </nav>
+                <a href="#contact" class="hidden md:inline-block btn-secondary font-medium py-2 px-5 rounded-lg">Hubungi Saya</a>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden container mx-auto px-6 pb-4">
+            <div class="glass-card rounded-xl p-4 flex flex-col space-y-4">
+                 <a href="#about" class="text-gray-300 hover:text-white transition-colors">Tentang Saya</a>
+                 <a href="#services" class="text-gray-300 hover:text-white transition-colors">Layanan</a>
+                 <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portofolio</a>
+                 <a href="#contact" class="btn-secondary font-medium py-2 px-5 rounded-lg text-center">Hubungi Saya</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Hero Section ===== -->
+        <section id="home" class="pt-32 pb-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <p class="font-semibold accent-green mb-2">TSAQQOF UNNAY | CREATIVE PORTFOLIO</p>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Mengubah Ide Menjadi <br> Karya Visual Memukau
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-gray-400 text-lg mb-10">
+                        Dari konsep awal hingga hasil akhir, saya menghadirkan solusi desain kreatif yang tidak hanya indah secara visual, tetapi juga efektif dalam berkomunikasi.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#portfolio" class="btn-primary font-bold py-3 px-8 rounded-lg">Lihat Karya Saya</a>
+                    </div>
+                </div>
+                
+                <div class="mt-20 flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="w-full md:w-1/2 lg:w-1/3">
+                        <img src="https://placehold.co/500x600/111827/34D399?text=Ganti+dengan+fotomu" alt="Tsaqqof Unnay" class="rounded-2xl shadow-2xl shadow-green-500/10">
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/3 grid grid-cols-2 gap-6 text-center">
+                        <div class="glass-card p-6 rounded-xl">
+                            <h3 class="text-4xl font-bold accent-green">5+</h3>
+                            <p class="text-gray-400 mt-2">Tahun Pengalaman</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h3 class="text-4xl font-bold accent-green">50+</h3>
+                            <p class="text-gray-400 mt-2">Proyek Selesai</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl col-span-2">
+                            <h3 class="text-4xl font-bold accent-green">100%</h3>
+                            <p class="text-gray-400 mt-2">Kepuasan Klien</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== About Section ===== -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">
+                        Mewujudkan Ide Menjadi <span class="accent-green">Karya Agung</span>
+                    </h2>
+                    <p class="max-w-2xl mx-auto text-gray-400 mt-4">
+                        Saya adalah seorang desainer visual yang bersemangat dalam menciptakan identitas merek, desain antarmuka yang menarik, dan fotografi yang bercerita.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <img src="https://placehold.co/600x450/1F2937/E5E5E5?text=Gambar+suasana+kerja" alt="Suasana Kerja" class="rounded-xl shadow-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Proses Kreatif Saya</h3>
+                        <p class="text-gray-400 mb-6">
+                           Setiap proyek adalah perjalanan kolaboratif. Saya memulai dengan mendengarkan visi Anda, melakukan riset mendalam, lalu menuangkannya ke dalam konsep desain yang inovatif dan sesuai dengan tujuan Anda.
+                        </p>
+                        <div class="space-y-4">
+                           <div class="flex items-start gap-3">
+                               <i data-feather="check-circle" class="accent-green mt-1 flex-shrink-0"></i>
+                               <p><strong class="text-white">Riset & Strategi:</strong> Memahami audiens dan tujuan bisnis Anda.</p>
+                           </div>
+                           <div class="flex items-start gap-3">
+                               <i data-feather="check-circle" class="accent-green mt-1 flex-shrink-0"></i>
+                               <p><strong class="text-white">Desain & Prototyping:</strong> Membuat sketsa, wireframe, hingga desain high-fidelity.</p>
+                           </div>
+                           <div class="flex items-start gap-3">
+                               <i data-feather="check-circle" class="accent-green mt-1 flex-shrink-0"></i>
+                               <p><strong class="text-white">Eksekusi & Revisi:</strong> Menghidupkan desain dan menyempurnakannya berdasarkan masukan Anda.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Services Section ===== -->
+        <section id="services" class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Layanan yang Saya Tawarkan</h2>
+                    <p class="max-w-2xl mx-auto text-gray-400 mt-4">
+                        Solusi kreatif untuk semua kebutuhan visual Anda.
+                    </p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4 accordion-container">
+                    <!-- Accordion Item 1 -->
+                    <div class="border border-gray-800 rounded-xl">
+                        <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-xl font-semibold text-white">01. Desain Logo & Branding</span>
+                            <i data-feather="plus" class="accent-green transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Saya merancang logo yang tak terlupakan dan membangun identitas merek yang kuat, mulai dari palet warna, tipografi, hingga panduan gaya visual.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 2 -->
+                    <div class="border border-gray-800 rounded-xl">
+                        <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-xl font-semibold text-white">02. Desain UI/UX</span>
+                            <i data-feather="plus" class="accent-green transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Membuat desain antarmuka untuk website dan aplikasi mobile yang tidak hanya indah, tetapi juga intuitif dan ramah pengguna untuk pengalaman terbaik.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 3 -->
+                    <div class="border border-gray-800 rounded-xl">
+                        <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-xl font-semibold text-white">03. Fotografi</span>
+                            <i data-feather="plus" class="accent-green transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Menyediakan jasa fotografi profesional untuk produk, potret, acara, dan konten media sosial yang mampu menangkap momen dan menceritakan sebuah kisah.</p>
+                        </div>
+                    </div>
+                     <!-- Accordion Item 4 -->
+                    <div class="border border-gray-800 rounded-xl">
+                        <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                            <span class="text-xl font-semibold text-white">04. Desain Grafis</span>
+                            <i data-feather="plus" class="accent-green transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <p class="pb-6 text-gray-400">Menciptakan berbagai materi pemasaran seperti poster, brosur, banner digital, dan konten media sosial yang menarik perhatian.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== Motto Section ===== -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white">
+                    Innovate <span class="accent-green">+</span> Inspire <span class="accent-green">+</span> Create
+                </h2>
+            </div>
+        </section>
+
+        <!-- ===== Portfolio Section ===== -->
+        <section id="portfolio" class="py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Karya Pilihan Saya</h2>
+                    <p class="max-w-2xl mx-auto text-gray-400 mt-4">
+                        Beberapa proyek yang telah saya kerjakan dengan penuh semangat.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1F2937/34D399?text=Proyek+1" alt="Proyek 1" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="p-6">
+                            <p class="accent-green text-sm font-semibold">Branding</p>
+                            <h3 class="text-xl font-bold text-white mt-2">Identitas Brand Kopi "Aroma"</h3>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1F2937/34D399?text=Proyek+2" alt="Proyek 2" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="p-6">
+                            <p class="accent-green text-sm font-semibold">Fotografi</p>
+                            <h3 class="text-xl font-bold text-white mt-2">Katalog Fashion "Urban Style"</h3>
+                        </div>
+                    </div>
+                    <div class="glass-card rounded-xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1F2937/34D399?text=Proyek+3" alt="Proyek 3" class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="p-6">
+                            <p class="accent-green text-sm font-semibold">UI/UX Design</p>
+                            <h3 class="text-xl font-bold text-white mt-2">Aplikasi Mobile "FitLife"</h3>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- ===== Contact Section ===== -->
+        <section id="contact" class="py-20 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Hubungi Saya Sekarang!</h2>
+                    <p class="max-w-xl mx-auto text-gray-400 mt-4 mb-10">
+                        Punya ide atau proyek menarik? Mari kita diskusikan dan wujudkan bersama.
+                    </p>
+                    <a href="mailto:email.anda@contoh.com" class="btn-primary font-bold py-4 px-10 rounded-lg text-lg">
+                        Kirim Pesan
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-2xl font-bold text-white">Tsaqqof U.</a>
+                <p class="text-gray-500 mt-2">&copy; 2024. All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                 <a href="https://www.linkedin.com/in/tsaqqof-unnay/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <!-- Ganti '#' dengan link Instagram Anda -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+                    <i data-feather="instagram"></i>
+                </a>
+                <!-- Ganti '#' dengan link Behance/Dribbble Anda -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+                    <i data-feather="dribbble"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inisialisasi Feather Icons
+        feather.replace();
+
+        // Logika untuk Accordion di bagian Services
+        const accordionContainer = document.querySelector('.accordion-container');
+        if (accordionContainer) {
+            accordionContainer.addEventListener('click', (e) => {
+                const header = e.target.closest('.accordion-header');
+                if (!header) return;
+
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('i');
+
+                // Tutup semua accordion lain
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item !== content) {
+                        item.style.maxHeight = null;
+                        item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Buka/tutup accordion yang diklik
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = 'rotate(45deg)';
+                }
+            });
+        }
+        
+        // Logika untuk Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Logika untuk mengubah background header saat scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/80', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-black/80', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+
+</body>
+</html>
